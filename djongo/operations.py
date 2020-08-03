@@ -115,3 +115,6 @@ class DatabaseOperations(BaseDatabaseOperations):
     
     def date_trunc_sql(self, lookup_type, field_name):
         return "DATE_TRUNC('%s', %s)" % (lookup_type, field_name)
+
+    def datetime_trunc_sql(self, lookup_type, field_name):
+        return "DATE_TRUNC('%s', %s)" % (lookup_type, field_name)
