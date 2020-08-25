@@ -496,6 +496,8 @@ class AlterQuery(DDLQuery):
                 feature += 'DEFAULT '
             elif tok.match(tokens.Keyword, 'SET'):
                 feature += 'SET '
+            elif tok.match(tokens.Keyword, 'TYPE'):
+                feature += 'TYPE '
             else:
                 raise SQLDecodeError(f'Unknown token: {tok}')
 
